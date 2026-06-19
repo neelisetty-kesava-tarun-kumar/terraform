@@ -1,9 +1,9 @@
 resource "aws_instance" "example" {
-  ami           = "ami-0c55b159cbfafe1f0"
-  instance_type = "t2.micro"
+  ami           = "ami-0220d79f3f480ecf5"
+  instance_type = "t3.micro"
 
   tags = {
-    Name = "HelloWorld"
-  }
-  
+    Name = "terraform"
+    Project = "roboshop"
+  } 
 }
