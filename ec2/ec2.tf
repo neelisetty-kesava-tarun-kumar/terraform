@@ -2,7 +2,7 @@
 resource "aws_instance" "example" {
   ami           = "ami-0220d79f3f480ecf5"
   instance_type = "t3.micro"
-  vpc_security_group_ids = [aws_security_group.allow_tls.id]
+  vpc_security_group_ids = [aws_security_group.allow_tls.id] #[aws_security_group.allow_tls.id] -> this is the dependency for security group. It will create security group first and then create instance.
 
   tags = {
     Name = "terraform"
